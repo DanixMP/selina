@@ -888,7 +888,7 @@ body {
     }
     
     .album-container {
-        padding: 0.5rem 0;
+        padding: 0.5rem 0 2rem 0;
     }
     
     .album-title {
@@ -899,7 +899,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem;
         padding: 1rem;
-        max-height: calc(100vh - 200px);
+        max-height: calc(100vh - 280px);
     }
     
     .album-item {
@@ -908,6 +908,7 @@ body {
     
     .album-continue {
         margin-top: 1.5rem;
+        margin-bottom: 1rem;
     }
     
     .question-box {
