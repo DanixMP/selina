@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hello Screen -->
+    <div id="helloScreen" class="screen active">
+        <div class="hello-container">
+            <h1 id="helloText" class="hello-text">Hello</h1>
+            <p class="tap-hint">Click to continue</p>
+        </div>
+    </div>
+
+    <!-- Expression Screen -->
+    <div id="expressionScreen" class="screen">
+        <div class="expression-container">
+            <p id="typewriterText" class="typewriter-text"></p>
+            <button id="continueBtn" class="continue-btn">Continue →</button>
+        </div>
+    </div>
+
+    <!-- Quote Screen -->
+    <div id="quoteScreen" class="screen">
+        <div class="quote-container">
+            <p id="quoteText" class="quote-text"></p>
+            <button id="albumBtn" class="continue-btn">What next ? →</button>
+        </div>
+    </div>
+
+    <!-- Album Popup Message -->
+    <div id="albumPopup" class="popup-overlay">
+        <div class="popup-content">
+            <h2 class="popup-title">Ready to See what was i hidding?</h2>
+            <p class="popup-message">This is a small portion of the Notebook that you were trying to peek in class.</p>
+            <button id="showAlbumBtn" class="popup-btn">Let's See! 🤍🥲</button>
+        </div>
+    </div>
+
+    <!-- Album Screen -->
+    <div id="albumScreen" class="screen">
+        <div class="album-container">
+            <h2 class="album-title">That Legendary Words</h2>
+            <div id="albumGrid" class="album-grid">
+                <!-- Images will be loaded here -->
+            </div>
+            <button id="albumContinueBtn" class="continue-btn album-continue">Continue →</button>
+        </div>
+    </div>
+
+    <!-- Final Question Screen -->
+    <div id="questionScreen" class="screen">
+        <div class="question-container">
+            <div class="question-box">
+                <p id="questionText" class="question-text"></p>
+                <button id="questionContinueBtn" class="continue-btn question-continue">Continue →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Quote Display Screen -->
+    <div id="finalQuoteScreen" class="screen">
+        <div class="final-quote-container">
+            <div class="final-quote-box">
+                <p id="finalQuoteText" class="final-quote-text"></p>
+                <button id="finalQuoteContinueBtn" class="continue-btn question-continue">Continue →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Persian Explanation Screen -->
+    <div id="persianScreen" class="screen">
+        <div class="persian-container">
+            <div class="persian-box">
+                <p id="persianText" class="persian-text"></p>
+                <button id="persianContinueBtn" class="continue-btn question-continue">Continue →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Persian Screen -->
+    <div id="persianScreen2" class="screen">
+        <div class="persian-container">
+            <div class="persian-box">
+                <p id="persianText2" class="persian-text"></p>
+                <button id="persian2ContinueBtn" class="continue-btn question-continue">Continue →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third Persian Screen (Different Theme) -->
+    <div id="persianScreen3" class="screen persian-dark-theme">
+        <div class="persian-container">
+            <div class="persian-box-dark">
+                <p id="persianText3" class="persian-text-dark"></p>
+                <button id="persian3ContinueBtn" class="continue-btn question-continue">Continue →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Name Screen -->
+    <div id="finalNameScreen" class="screen final-name-theme">
+        <div class="final-name-container">
+            <h1 id="finalNameText" class="final-name-text"></h1>
+        </div>
+    </div>
+
+    <!-- Image Viewer Modal -->
+    <div id="imageViewer" class="image-viewer">
+        <button id="closeViewer" class="viewer-close">×</button>
+        <button id="prevImage" class="viewer-nav prev">‹</button>
+        <button id="nextImage" class="viewer-nav next">›</button>
+        <img id="viewerImage" class="viewer-image" src="" alt="">
+        <div class="viewer-counter">
+            <span id="currentImageIndex">1</span> / <span id="totalImages">0</span>
+        </div>
+    </div>
+
+    <!-- Music Player Popup -->
+    <div id="musicPlayer" class="music-player">
+        <div class="music-header">
+            <button id="collapseBtn" class="control-btn collapse-btn" title="Collapse">−</button>
+        </div>
+        <div class="music-content">
+            <div class="music-icon">♪</div>
+            <div class="music-info">
+                <h3 id="songTitle">Now Playing</h3>
+                <p id="songArtist">Lyn Lapid</p>
+            </div>
+            <div class="music-quote">
+                <p id="musicQuote">"The best part of the song quote goes here"</p>
+            </div>
+            <div class="music-controls">
+                <button id="playPauseBtn" class="control-btn" title="Pause">
+                    <span class="play-icon">⏸</span>
+                </button>
+                <button id="stopBtn" class="control-btn" title="Stop">⏹</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="audioPlayer" loop>
+        <source src="assests/Off Day.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
