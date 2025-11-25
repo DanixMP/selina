@@ -23,7 +23,7 @@ const finalQuestion = "Hope you will see all of them.";
 const finalQuoteDisplay = "In a world full of temporary things, you are a perpetual feeling. Every sunrise reminds me of your smile, and every sunset whispers your name. You are my favorite chapter in the story of my life.";
 
 // Persian explanation (customize this with your own message!)
-const persianExplanation = " من این وب‌سایت رو ساختم چون می‌خواستم یه چیز خاص و متفاوت برات درست کنم. می‌خواستم بهت نشون بدم که چقدر برام مهمی و چقدر وقت گذاشتم که یه لحظه‌ی خاص برات بسازم. هر کلمه، هر عکس و هر لحظه‌ای که اینجا هست، از ته دلم برای توئه. امیدوارم این کار کوچیک بتونه حس واقعی منو بهت نشون بده و لبخندی رو بهت اصافه کنه";
+const persianExplanation = " این همه که با کلمات درگیر شدیم انصاف نیست که نیایم اون جا که چرا این همه کار و کار و کار راستی اش اینه هر چی بگم درمورد شما باز هم کم میمونه و باز هم از نگاه های زنده بخش خودتون تا لبخند ابدی رو تک تک این ها میشه یه عالمه کتاب نوشت...";
 
 // Second Persian message (customize this!)
 const persianMessage2 = "میدونم خیلی یهویی شد یا اینکه خیلی دیر شد ولی چون نشد که اینا رو با زل زدن و غرق در چشات بهت بگم ولی اینم یه راهی هست یه راهی که سخت تر از همه ی اینها نمیدونم چی فکر میکنی ولی نمیخوام به اون لبخند خاص و بینظیری که من را به این حال انداخته آسیب بیاد";
