@@ -26,10 +26,19 @@ const finalQuoteDisplay = "In a world full of temporary things, you are a perpet
 const persianExplanation = " این همه که با کلمات درگیر شدیم انصاف نیست که نیایم اون جا که چرا این همه کار و کار و کار راستی اش اینه هر چی بگم درمورد شما باز هم کم میمونه و باز هم از نگاه های زنده بخش خودتون تا لبخند ابدی رو تک تک این ها میشه یه عالمه کتاب نوشت...";
 
 // Second Persian message (customize this!)
-const persianMessage2 = "میدونم خیلی یهویی شد یا اینکه خیلی دیر شد ولی چون نشد که اینا رو با زل زدن و غرق در چشات بهت بگم ولی اینم یه راهی هست یه راهی که سخت تر از همه ی اینها نمیدونم چی فکر میکنی ولی نمیخوام به اون لبخند خاص و بینظیری که من را به این حال انداخته آسیب بیاد";
+const persianMessage2 = " شاید معلوم کرده بودم یکم شاید هم نه نمیدونم ولی وقتش بود و میگذشت حتی،گفتن یک بار داشت نگفتن هم هزار بار،امیدوارم که درست ترینشو انتخاب کردم";
 
 // Third Persian message (customize this!)
-const persianMessage3 = "ممنونم ازت که این همه وقت گذاشتی، تمام اون کادو ها معنی خاصی به همراه دارند و امیدوارم که ازشون خوشت بیاد";
+const persianMessage3 = "خیلی ناب هستی،از انرژی ات گرفته تا لبخندت یه جوری که اگه یه کتابی رو بخواهم درباره تو بنویسم هر یک از اینا یک نسخه جدا از کتاب اصلی خواهد بود که نمیشه تو یه کتاب جا کرد :) که";
+
+// Fourth Persian message (customize this!)
+const persianMessage4 = "همون اول که گفتم امروز رو به عنوان سخت ترین و بهترین فصل زندگیم خواهد بود و با من جاویدان خواهد شد";
+
+// Fifth Persian message (customize this!)
+const persianMessage5 ="ممنونم ازت که امروز رو انتخاب کردی، هر چی هم که بشه امروز تو همیشه شعرای این دل عاشق خواهی بود";
+
+// Pre-final dark message (customize this!)
+const preFinalMessage = "And now, the moment I've been waiting for... to tell you who all of this is for.";
 
 // Final name
 const finalName = "SELINA";
@@ -69,6 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
     setupPersianContinue();
     setupPersian2Continue();
     setupPersian3Continue();
+    setupPersian4Continue();
+    setupPersian5Continue();
+    setupPreFinalContinue();
     setupImageViewer();
 });
 
@@ -566,16 +578,156 @@ function setupPersian3Continue() {
     const persian3ContinueBtn = document.getElementById('persian3ContinueBtn');
     
     persian3ContinueBtn.addEventListener('click', () => {
+        transitionToPersian4();
+    });
+}
+
+// Transition to fourth Persian screen
+function transitionToPersian4() {
+    const persianScreen3 = document.getElementById('persianScreen3');
+    const persianScreen4 = document.getElementById('persianScreen4');
+    
+    persianScreen3.classList.remove('active');
+    
+    setTimeout(() => {
+        persianScreen4.classList.add('active');
+        startPersian4Typewriter();
+    }, 800);
+}
+
+// Fourth Persian typewriter effect
+function startPersian4Typewriter() {
+    const persian4Element = document.getElementById('persianText4');
+    const persian4ContinueBtn = document.getElementById('persian4ContinueBtn');
+    let charIndex = 0;
+    
+    function type() {
+        if (charIndex < persianMessage4.length) {
+            persian4Element.textContent = persianMessage4.substring(0, charIndex + 1);
+            charIndex++;
+            
+            const speed = 50;
+            setTimeout(type, speed);
+        } else {
+            persian4Element.classList.add('finished');
+            setTimeout(() => {
+                persian4ContinueBtn.classList.add('show');
+            }, 500);
+        }
+    }
+    
+    type();
+}
+
+// Setup Persian 4 continue button
+function setupPersian4Continue() {
+    const persian4ContinueBtn = document.getElementById('persian4ContinueBtn');
+    
+    persian4ContinueBtn.addEventListener('click', () => {
+        transitionToPersian5();
+    });
+}
+
+// Transition to fifth Persian screen
+function transitionToPersian5() {
+    const persianScreen4 = document.getElementById('persianScreen4');
+    const persianScreen5 = document.getElementById('persianScreen5');
+    
+    persianScreen4.classList.remove('active');
+    
+    setTimeout(() => {
+        persianScreen5.classList.add('active');
+        startPersian5Typewriter();
+    }, 800);
+}
+
+// Fifth Persian typewriter effect
+function startPersian5Typewriter() {
+    const persian5Element = document.getElementById('persianText5');
+    const persian5ContinueBtn = document.getElementById('persian5ContinueBtn');
+    let charIndex = 0;
+    
+    function type() {
+        if (charIndex < persianMessage5.length) {
+            persian5Element.textContent = persianMessage5.substring(0, charIndex + 1);
+            charIndex++;
+            
+            const speed = 50;
+            setTimeout(type, speed);
+        } else {
+            persian5Element.classList.add('finished');
+            setTimeout(() => {
+                persian5ContinueBtn.classList.add('show');
+            }, 500);
+        }
+    }
+    
+    type();
+}
+
+// Setup Persian 5 continue button
+function setupPersian5Continue() {
+    const persian5ContinueBtn = document.getElementById('persian5ContinueBtn');
+    
+    persian5ContinueBtn.addEventListener('click', () => {
+        transitionToPreFinal();
+    });
+}
+
+// Transition to pre-final screen
+function transitionToPreFinal() {
+    const persianScreen3 = document.getElementById('persianScreen3');
+    const preFinalScreen = document.getElementById('preFinalScreen');
+    
+    persianScreen3.classList.remove('active');
+    
+    setTimeout(() => {
+        preFinalScreen.classList.add('active');
+        startPreFinalTypewriter();
+    }, 800);
+}
+
+// Pre-final typewriter effect
+function startPreFinalTypewriter() {
+    const preFinalElement = document.getElementById('preFinalText');
+    const preFinalContinueBtn = document.getElementById('preFinalContinueBtn');
+    let charIndex = 0;
+    
+    function type() {
+        if (charIndex < preFinalMessage.length) {
+            preFinalElement.textContent = preFinalMessage.substring(0, charIndex + 1);
+            charIndex++;
+            
+            // Consistent speed
+            const speed = 50;
+            setTimeout(type, speed);
+        } else {
+            // Remove cursor and show continue button
+            preFinalElement.classList.add('finished');
+            setTimeout(() => {
+                preFinalContinueBtn.classList.add('show');
+            }, 500);
+        }
+    }
+    
+    type();
+}
+
+// Setup pre-final continue button
+function setupPreFinalContinue() {
+    const preFinalContinueBtn = document.getElementById('preFinalContinueBtn');
+    
+    preFinalContinueBtn.addEventListener('click', () => {
         transitionToFinalName();
     });
 }
 
 // Transition to final name screen
 function transitionToFinalName() {
-    const persianScreen3 = document.getElementById('persianScreen3');
+    const preFinalScreen = document.getElementById('preFinalScreen');
     const finalNameScreen = document.getElementById('finalNameScreen');
     
-    persianScreen3.classList.remove('active');
+    preFinalScreen.classList.remove('active');
     
     setTimeout(() => {
         finalNameScreen.classList.add('active');
